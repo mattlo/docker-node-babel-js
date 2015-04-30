@@ -5,7 +5,7 @@ let http = require('http'),
     o;
 
 // compile front-end piece on-the-fly
-// just for show-and-tell on app start, you'll want to shelve this in a automative process
+// just for show-and-tell on app start, you'll want to shelve this in an automatic process
 exec('babel browser-app.js --out-file ' + jsFileName);
 
 // render
