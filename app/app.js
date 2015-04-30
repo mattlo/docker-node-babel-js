@@ -12,13 +12,13 @@ exec('babel browser-app.js --out-file ' + jsFileName);
 o = (res, status, data, header) => {
     res.writeHead(status, header);
     res.end(data);
-}
+};
 
 // spawn server
 http.createServer((req, res) => {
     if (req.url === '/' + jsFileName) {
         // file server
-        fs.readFile('browser-app-compiled.js', (err, data) => {
+        fs.readFile(jsFileName, (err, data) => {
             err ? o(res, 500, 'File doesn\'t exist') : o(res, 200, data, {'Content-Type': 'text/javascript'});
         });
     } else {
