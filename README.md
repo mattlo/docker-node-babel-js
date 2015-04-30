@@ -12,4 +12,4 @@ Running ES6 code on Node within Docker
 - `boot2docker up`
 - `boot2docker ip` - need to obtain host
 - `docker-compose up`
-- On your web browser, go to <boot2docker ip>:3000
+- On your web browser, go to \<boot2docker ip>:3000
